@@ -1,0 +1,24 @@
+<div>
+  <b>Text similarity</b>
+</div>
+
+<textarea [(ngModel)]="text1" rows="3" ></textarea>
+<textarea [(ngModel)]="text2" rows="3" ></textarea>
+<br>
+<button  type="submit" (click)="compare()">Submit</button>
+<br>
+<br>
+<div *ngIf="showSimilarity">
+  <p>Similarity:{{ similarity | percent }}</p>
+</div>
+<!--<div>-->
+<!--  <form [formGroup]="textSimilarityForm" class="mb-5">-->
+<!--    <div class="form-group mb-2">-->
+<!--      <label for="exampleFormControlTextarea1">Body</label>-->
+<!--      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [formControlName]="'body'"></textarea>-->
+<!--      <div class="error-message text-danger" *ngIf="commentForm.get('body')?.errors?.required"> Body is required! </div>-->
+<!--    </div>-->
+
+<!--    <button  type="submit" class="btn btn-primary">Submit</button>-->
+<!--  </form>-->
+<!--</div>-->

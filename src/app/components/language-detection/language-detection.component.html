@@ -1,0 +1,17 @@
+<div>
+  <b>Language detection</b>
+</div>
+
+<textarea [(ngModel)]="text" rows="3" ></textarea>
+<br>
+Clean <input type="checkbox" (change)="switchOptionClean()">
+<br>
+<button  type="submit" (click)="detectLanguages()">Submit</button>
+<br>
+<br>
+<ol>
+  <li *ngFor="let detectedLang of detectedLangs">
+    {{ detectedLang.lang | language }}
+    {{ detectedLang.confidence | percent }}
+  </li>
+</ol>

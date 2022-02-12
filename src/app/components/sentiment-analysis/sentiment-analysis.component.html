@@ -1,0 +1,19 @@
+<div>
+  <b>Sentiment analysis</b>
+</div>
+
+<textarea [(ngModel)]="text" rows="3" ></textarea>
+<br>
+Language:
+<select [(ngModel)]="lang">
+  <option *ngFor="let language of languages" [ngValue]="language">{{language | language}}</option>
+</select>
+<br>
+<button  type="submit" (click)="analyse()">Submit</button>
+<br>
+<br>
+
+<div *ngIf="showAnalysis">
+Score: {{ score }}
+<div [style]="{'color': color}">({{ type | titlecase }})</div>
+</div>

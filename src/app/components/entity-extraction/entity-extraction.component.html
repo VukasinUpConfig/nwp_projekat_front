@@ -1,0 +1,27 @@
+<div>
+  <b>Entity Extraction</b>
+</div>
+
+<textarea [(ngModel)]="text" rows="3" ></textarea>
+<br>
+More Tags
+<input type="range" name="range" [(ngModel)]="min_confidence" min="0"  max="1" step="0.1">
+More Precision
+<br><br>Include:<br>
+Image <input type="checkbox" (change)="switchOptionImage()">
+Abstract <input type="checkbox" (change)="switchOptionAbstract()">
+Categories <input type="checkbox" (change)="switchOptionCategories()">
+
+<br><br>
+<button  type="submit" (click)="extractEntities()">Submit</button>
+<br>
+
+<ol>
+  <li *ngFor="let entity of entities">
+    <b>Title:</b>{{ entity.title }}<br>
+    <img *ngIf="image && entity.image" [src]="entity.image.thumbnail" style="width:50px;height:50px;"><br>
+    <div *ngIf="abstract && entity.abstract"><b>Abstract: </b>{{ entity.abstract }}</div>
+    <div *ngIf="categories && entity.categories"><b>Categories: </b>{{ entity.categories }}</div>
+    <br>
+  </li>
+</ol>

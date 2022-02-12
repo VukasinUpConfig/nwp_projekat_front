@@ -1,0 +1,17 @@
+<div>
+  <h3>Login page</h3>
+
+  <div>
+    <form (submit)="login()" class="mb-5">
+      <div class="form-group mb-2">
+        <label for="jwt">{{jwt}}</label>
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="username" [(ngModel)]="username">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="password" [(ngModel)]="password">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>
