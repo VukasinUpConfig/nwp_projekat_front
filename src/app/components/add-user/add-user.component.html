@@ -1,0 +1,24 @@
+<div>
+  <b>Add user</b>
+</div>
+
+<div style="display: none;">
+  <input type="text" id="PreventChromeAutocomplete"
+   name="PreventChromeAutocomplete" autocomplete="username" />
+  <input type="password" id="PreventChromePasswordAutocomplete"
+   name="PreventChromePasswordAutocomplete" autocomplete="password" />
+</div>
+Username: <input type="text" id="username" placeholder="username" [(ngModel)]="username"><br>
+Password: <input type="password" id="password" name="password" placeholder="password" [(ngModel)]="password"><br>
+First name: <input type="text" id="firstName" name="firstName" placeholder="firstName" [(ngModel)]="firstName"><br>
+Last name: <input type="text" id="lastName" name="lastName" placeholder="lastName" [(ngModel)]="lastName"><br>
+Permissions: <ng-multiselect-dropdown
+  [settings]="dropdownSettings"
+  [data]="permissions"
+  [(ngModel)]="selectedPermissions"
+>
+</ng-multiselect-dropdown>
+<br>
+<button type="submit" (click)="addUser()">Submit</button>
+<br>
+{{message}}

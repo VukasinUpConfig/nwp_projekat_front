@@ -1,6 +1,16 @@
-export interface UserLogin {
+export interface User {
+  id: number,
+  firstName: string,
+  lastName: string,
   username: string,
-  password: string
+  permissions: Permission[]
+  permissionNames: String[]
+}
+
+export interface Permission 
+{
+  id: number,
+  name: string
 }
 
 export interface Jwt {

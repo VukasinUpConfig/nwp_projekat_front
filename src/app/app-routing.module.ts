@@ -8,6 +8,9 @@ import {SentimentAnalysisComponent} from "./components/sentiment-analysis/sentim
 import {TextSimilarityComponent} from "./components/text-similarity/text-similarity.component";
 import {HistoryComponent} from "./components/history/history.component";
 import { LoginComponent } from './components/login/login.component';
+import { UsersComponent } from './components/users/users.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 const routes: Routes = [
   {
@@ -17,6 +20,18 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginComponent
+  },
+  {
+    path: "users",
+    component: UsersComponent
+  },
+  {
+    path: "add-user",
+    component: AddUserComponent
+  },
+  {
+    path: "edit-user",
+    component: EditUserComponent
   },
   {
     path: "configuration",

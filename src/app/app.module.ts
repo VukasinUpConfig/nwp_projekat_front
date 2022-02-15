@@ -13,6 +13,10 @@ import { SentimentAnalysisComponent } from './components/sentiment-analysis/sent
 import { LanguageDetectionComponent } from './components/language-detection/language-detection.component';
 import { HistoryComponent } from './components/history/history.component';
 import { LoginComponent } from './components/login/login.component';
+import { UsersComponent } from './components/users/users.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { LoginComponent } from './components/login/login.component';
     LanguageDetectionComponent,
     HistoryComponent,
     LanguagePipe,
-    LoginComponent
+    LoginComponent,
+    UsersComponent,
+    AddUserComponent,
+    EditUserComponent
   ],
 
     imports: [
@@ -32,7 +39,8 @@ import { LoginComponent } from './components/login/login.component';
         AppRoutingModule,
         HttpClientModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        NgMultiSelectDropDownModule
     ],
   providers: [],
   bootstrap: [AppComponent]
